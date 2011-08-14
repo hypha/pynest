@@ -68,15 +68,21 @@ def _make_call(action, args=[], debug=0):
 
 def set_country(country_code):
     '''
-    Set country we wish to use.
+    Choose the country we wish to use.
     Available country codes can be returned by using get_supported_countries(). 
     '''
     if country_code in servers.keys(): country = country_code
 
 def get_supported_countries():
+    '''
+    Return list of all supported countries
+    '''
     return servers.keys()
 
 def get_country():
+    '''
+    Return current country.
+    '''
     return country
 
 
@@ -84,9 +90,17 @@ def get_country():
 # misc API methods
 #
 def echo(**kwargs):
+    '''
+    Make an 'echo' request. Whatever named arguments are passed to this method
+    are used as parameters to the request.
+    '''
     return _make_call('echo', kwargs.items())
 
 def keywords():
+    '''
+    Make a 'keywords' request. Returns all available keywords from the nestoria
+    API.
+    '''
     return _make_call('keywords')
 
 

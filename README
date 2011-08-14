@@ -1,0 +1,94 @@
+def _make_call(action, args=[], debug=0):
+    ''' 
+    action: (string) API method we wish to call
+    args: (list of tuples) A list of key,value tuples
+    '''
+
+def set_country(country_code):
+    '''
+    Choose the country we wish to use.
+    Available country codes can be returned by using get_supported_countries(). 
+    '''
+
+def get_supported_countries():
+    '''
+    Return list of all supported countries
+    '''
+
+def get_country():
+    '''
+    Return current country.
+    '''
+
+def echo(**kwargs):
+    '''
+    Make an 'echo' request. Whatever named arguments are passed to this method
+    are used as parameters to the request.
+    '''
+
+def keywords():
+    '''
+    Make a 'keywords' request. Returns all available keywords from the nestoria
+    API.
+    '''
+
+def metadata_by_area(place_name):
+    '''
+    place_name: (string) anything you would type into the search 
+            box on Nestoria: a place name, post code, 
+            tube station, etc.
+            e.g. "Chelsea" or "SW14"
+    '''
+    
+
+def metadata_by_longlat(longlat):
+    '''
+    longlat: (two-tuple of strings) a bounding box in the format 
+        sw_latitude, sw_longitude, ne_latitude2, ne_longitude2             
+        e.g ('51.684183,-3.431481', '51.85415,-3.077859')
+    '''
+
+def metadata_by_center(center, radius='2km'):
+    '''
+    center: (string) latitude and longitude. A default radius of 2km 
+                will be used. 
+                e.g. '51.684183,-3.431481'
+    radius: (string) radius from center in kilometers or miles 
+            (km or mi needs to be set) 
+            e.g 10km
+    '''
+
+def search_by_area(place_name, sf, snp):
+    '''
+    place_name: (string) anything you would type into the search 
+            box on Nestoria: a place name, post code, 
+            tube station, etc.
+            e.g. "Chelsea" or "SW14"
+    filter: (dictionary) http://www.nestoria.co.uk/help/api-search-listings
+    '''
+
+def search_by_longlat(longlat, sf, snp):
+    '''
+    longlat: (two-tuple of strings) a bounding box in the format 
+        sw_latitude, sw_longitude, ne_latitude2, ne_longitude2             
+        e.g ('51.684183,-3.431481', '51.85415,-3.077859')
+    sf: (dictionary) search filter as defined in 
+        http://www.nestoria.co.uk/help/api-search-listings
+    snp: (dictionary) Sort and pagination parameters as defined in 
+        http://www.nestoria.co.uk/help/api-search-listings
+    '''
+
+def search_by_center(center, sf, snp, radius='2km'):
+    '''
+    center: (string) latitude and longitude. A default radius of 2km 
+                will be used. 
+                e.g. '51.684183,-3.431481'
+    radius: (string) radius from center in kilometers or miles 
+            (km or mi needs to be set) 
+            e.g 10km
+    sf: (dictionary) search filter as defined in 
+        http://www.nestoria.co.uk/help/api-search-listings
+    snp: (dictionary) Sort and pagination parameters as defined in 
+        http://www.nestoria.co.uk/help/api-search-listings            
+    '''
+
